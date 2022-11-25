@@ -1,7 +1,9 @@
+html {
+  height: 100%;
+}
 body {
   text-align: center;
   font-family: sans-serif;
-  height: 100%;
   background: radial-gradient(
     circle at 10% 20%,
     rgba(216, 241, 230, 0.46) 0.1%,
@@ -15,15 +17,16 @@ body {
   box-shadow: 0px 0px 16px 1px rgb(0 0 0 / 10%);
   border-radius: 20px;
   background: #fff;
-  padding: 40px 30px 30px;
+  padding: 40px 30px 40px;
 }
 
-h1.title {
+h1 {
   text-align: center;
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 select {
   width: 100%;
   padding: 8px;
@@ -36,7 +39,7 @@ select {
 .cities {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0;
+  margin: 0;
 }
 
 .cities li {
@@ -45,30 +48,21 @@ select {
   justify-content: space-between;
   border-bottom: 1px dashed #e2e2e2;
   padding: 20px 0;
+  text-align: left;
 }
+
 .cities li:last-child {
   border-bottom: none;
 }
+
 .cities li .city_content h2 {
   font-weight: 600;
   font-size: 25px;
   margin: 0 0 5px;
 }
 .cities li .city_content .date {
-  opacity: 0.6;
+  opacity: 0.5;
   margin: 0;
-}
-
-.cities li .city_content a {
-  color: #41b482;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
-
-.cities li .city_content a:hover {
-  color: #41b482;
-  opacity: 0.8;
 }
 
 .cities li .time {
@@ -81,8 +75,23 @@ select {
   font-weight: 600;
 }
 
+.back-link {
+  color: #41b482;
+  text-decoration: none;
+  margin: 10px 0;
+  display: block;
+  text-align: left;
+}
+
+.back-link:hover {
+  color: #41b482;
+  opacity: 0.8;
+}
+
 footer {
   text-align: center;
+  padding: 0 0 20px;
+  display: block;
 }
 
 footer a {
@@ -93,4 +102,16 @@ footer a {
 footer a:hover {
   color: #41b482;
   opacity: 0.8;
+}
+
+@media (max-width: 650px) {
+  body {
+    padding: 0 10px;
+  }
+  .cities li {
+    display: inline-block;
+  }
+  .cities li .time {
+    margin-top: 8px;
+  }
 }

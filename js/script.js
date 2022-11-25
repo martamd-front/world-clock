@@ -56,11 +56,12 @@ function updateCity(event) {
             <div class="city_content">
               <h2>${cityName}</h2>
               <p class="date">${cityDate}</p>
-              <a href="/">< Back to all cities</a>
+             
             </div>
             <div class="time">${cityTime}</div>
           </li>
-        </ul>`;
+        </ul>
+         <a class="back-link" href="/">< Back to all cities</a>`;
   }
 }
 let citiesSelectElement = document.querySelector("#city");
