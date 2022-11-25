@@ -41,9 +41,10 @@ function updateCity(event) {
     let citiesElement = document.querySelector("#cities");
     citiesElement.innerHTML = `<ul class="cities" id="cities">
           <li>
-            <div>
+            <div class="city_content">
               <h2>${cityName}</h2>
               <p class="date">${cityDate}</p>
+              <a href="/">< Back to all cities</a>
             </div>
             <div class="time">${cityTime}</div>
           </li>

@@ -49,15 +49,28 @@ select {
 .cities li:last-child {
   border-bottom: none;
 }
-.cities li h2 {
+.cities li .city_content h2 {
   font-weight: 600;
   font-size: 25px;
   margin: 0 0 5px;
 }
-.cities li .date {
+.cities li .city_content .date {
   opacity: 0.6;
   margin: 0;
 }
+
+.cities li .city_content a {
+  color: #41b482;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.cities li .city_content a:hover {
+  color: #41b482;
+  opacity: 0.8;
+}
+
 .cities li .time {
   font-weight: 700;
   font-size: 30px;
