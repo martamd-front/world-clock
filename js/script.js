@@ -11,15 +11,27 @@ function updateTime() {
       .format("h:mm:ss [<small>]A[</small>]")}`;
   }
 
-  let parisElement = document.querySelector("#paris");
-  if (parisElement) {
-    let parisDate = parisElement.querySelector(".date");
-    let parisTime = parisElement.querySelector(".time");
-    parisDate.innerHTML = `${moment()
-      .tz("Europe/Paris")
+  let romeElement = document.querySelector("#rome");
+  if (romeElement) {
+    let romeDate = romeElement.querySelector(".date");
+    let romeTime = romeElement.querySelector(".time");
+    romeDate.innerHTML = `${moment()
+      .tz("Europe/Rome")
       .format("MMMM Do, YYYY")}`;
-    parisTime.innerHTML = `${moment()
-      .tz("Europe/Paris")
+    romeTime.innerHTML = `${moment()
+      .tz("Europe/Rome")
+      .format("h:mm:ss [<small>]A[</small>]")}`;
+  }
+
+  let aucklandElement = document.querySelector("#auckland");
+  if (aucklandElement) {
+    let aucklandDate = auckland.querySelector(".date");
+    let aucklandTime = aucklandElement.querySelector(".time");
+    aucklandDate.innerHTML = `${moment()
+      .tz("Pacific/Auckland")
+      .format("MMMM Do, YYYY")}`;
+    aucklandTime.innerHTML = `${moment()
+      .tz("Pacific/Auckland")
       .format("h:mm:ss [<small>]A[</small>]")}`;
   }
 }
