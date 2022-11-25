@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.content {
+  max-width: 500px;
+  margin: 20px auto;
+  border: 1px solid red;
+  border-radius: 20px;
+  text-align: center;
+}
+select {
+  width: 300px;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 18px;
+}

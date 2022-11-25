@@ -14,8 +14,27 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div class="content">
       <h1>World clock</h1>
+      <form>
+        <select id="cities">
+          <option value="">Select one city</option>
+          <option value="Europe/Paris">Paris 🇫🇷</option>
+          <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
+          <option value="Australia/Sydney">Sydney 🇦🇺</option>
+        </select>
+      </form>
+      <div class="city">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <h2>Los Angeles 🇺🇸</h2>
+            <p>November 25th 2022</p>
+          </div>
+          <div class="col-xs-12 col-sm-6" class="time">
+            1:28:14 <small>AM</small>
+          </div>
+        </div>
+      </div>
       <footer>
         <p class="built_by">
           <a href="https://github.com/martamd-front/world-clock" target="_blank"
