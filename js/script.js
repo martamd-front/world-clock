@@ -41,17 +41,18 @@ setInterval(updateTime, 1);
 
 function updateCity(event) {
   if (event.target.value.length > 0) {
-    let cityTimeZone = event.target.value;
-    if (cityTimeZone === "current") {
-      cityTimeZone = moment.tz.guess();
-    }
-    let cityName = cityTimeZone.replace("_", " ").split("/")[1];
-    let cityDate = moment().tz(cityTimeZone).format("MMMM Do, YYYY");
-    let cityTime = moment()
-      .tz(cityTimeZone)
-      .format("h:mm:ss [<small>]A[</small>]");
-    let citiesElement = document.querySelector("#cities");
-    citiesElement.innerHTML = `<ul class="cities" id="cities">
+    setInterval(function () {
+      let cityTimeZone = event.target.value;
+      if (cityTimeZone === "current") {
+        cityTimeZone = moment.tz.guess();
+      }
+      let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+      let cityDate = moment().tz(cityTimeZone).format("MMMM Do, YYYY");
+      let cityTime = moment()
+        .tz(cityTimeZone)
+        .format("h:mm:ss [<small>]A[</small>]");
+      let citiesElement = document.querySelector("#cities");
+      citiesElement.innerHTML = `<ul class="cities" id="cities">
           <li>
             <div class="city_content">
               <h2>${cityName}</h2>
@@ -62,7 +63,9 @@ function updateCity(event) {
           </li>
         </ul>
          <a class="back-link" href="/">< Back to all cities</a>`;
+    }, 1);
   }
 }
+
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
